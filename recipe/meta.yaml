@@ -1,18 +1,18 @@
 {% set name = "pytorch-minimize" %}
-{% set version = "0.0.2" %}
+{% set version = "0.1.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pytorch-minimize-{{ version }}.tar.gz
-  sha256: 32dfe29759d8c07ca4b740793ec9578e50d1a7c41782e53cff1318d9d9154756
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 8586c2050c7a0ec0d34178c1bd40206a4f9402f63ff6628f42481d6d5f2200c2
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 2
+  number: 0
 
 requirements:
   host:
