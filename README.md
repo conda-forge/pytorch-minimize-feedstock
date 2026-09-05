@@ -3,7 +3,7 @@ About pytorch-minimize-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pytorch-minimize-feedstock/blob/main/LICENSE.txt)
 
-Home: https://pytorch-minimize.readthedocs.io
+Home: https://pytorch-minimize.readthedocs.io/
 
 Package license: MIT
 
@@ -13,10 +13,11 @@ Current build status
 ====================
 
 
-<table><tr><td>All platforms:</td>
+<table><tr>
+    <td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=21819&branchName=main">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pytorch-minimize-feedstock?branchName=main">
+      <a href="https://github.com/conda-forge/pytorch-minimize-feedstock/actions/workflows/conda-build.yml">
+        <img src="https://github.com/conda-forge/pytorch-minimize-feedstock/actions/workflows/conda-build.yml/badge.svg?event=push&branch=main">
       </a>
     </td>
   </tr>
@@ -39,31 +40,73 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `pytorch-minimize` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install pytorch-minimize
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba install pytorch-minimize
 ```
 
-It is possible to list all of the versions of `pytorch-minimize` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add pytorch-minimize
+# for installing globally
+pixi global install pytorch-minimize
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `pytorch-minimize` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search pytorch-minimize --channel conda-forge
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search pytorch-minimize --channel conda-forge
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search pytorch-minimize --channel conda-forge
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -75,6 +118,8 @@ mamba repoquery whoneeds pytorch-minimize --channel conda-forge
 # List dependencies of `pytorch-minimize`:
 mamba repoquery depends pytorch-minimize --channel conda-forge
 ```
+
+</details>
 
 
 About conda-forge
